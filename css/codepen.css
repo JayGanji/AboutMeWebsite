@@ -1,0 +1,124 @@
+.child1{
+  width: 100px;
+  height:100px;
+  background: #27ff00;
+  margin-left: 350px;
+  margin-top: 100px;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  animation-name: child1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+  left: -300px;
+
+}
+@keyframes child1 {
+  0%,100%{
+    transform: none;
+  }
+  25%{
+    -ms-z-index: 2;
+    z-index: 2;
+    transform: scale(1.15);
+  }
+
+  50%{
+    transform: translateX(150px);
+  }
+  75%{
+    -ms-z-index: 1;
+    z-index: 1;
+  }
+}
+.child2{
+  width: 100px;
+  height:100px;
+  background-color: #00adff;
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 100px;
+  display: block;
+  border-radius: 50%;
+  animation-name: child2;
+  animation-duration: 5s;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+  left: -400px;
+}
+@keyframes child2 {
+  0%,100%{
+    transform: none;
+  }
+  25%{
+    -ms-z-index: 1;
+    z-index: 1;
+
+  }
+  50%{
+    transform: translateX(-200px);
+  }
+  75%{
+    z-index: 2;
+    -ms-z-index: 2;
+    transform: scale(1.15);
+  }
+}
+
+/****MEDIA QUERIES****/
+
+/* larger screens media query */
+
+@media screen and (min-width: 960px) {
+
+    .child1{
+        width: 175px;
+        height: 175px;
+        left: 0px;
+    }
+    @keyframes child1 {
+        0%,100%{
+          transform: none;
+        }
+        25%{
+          -ms-z-index: 2;
+          z-index: 2;
+          transform: scale(1.15);
+        }
+      
+        50%{
+          transform: translateX(350px);
+        }
+        75%{
+          -ms-z-index: 1;
+          z-index: 1;
+        }
+      }
+
+    .child2{
+        width: 175px;
+        height: 175px;
+        left: -100px;
+    }
+    @keyframes child2 {
+        0%,100%{
+          transform: none;
+        }
+        25%{
+          -ms-z-index: 1;
+          z-index: 1;
+      
+        }
+        50%{
+          transform: translateX(-400px);
+        }
+        75%{
+          z-index: 2;
+          -ms-z-index: 2;
+          transform: scale(1.15);
+        }
+      }
+}
